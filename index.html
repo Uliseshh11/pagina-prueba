@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Página Web</title>
+  <title>Clases de Alemán en Línea - Givka Morales</title>
   <style>
-    /* Reset básico */
     * {
       margin: 0;
       padding: 0;
@@ -14,80 +13,164 @@
     }
 
     body {
+      background: #f4f4f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
       background: linear-gradient(135deg, #667eea, #764ba2);
       color: white;
       text-align: center;
-      padding: 50px 20px;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      padding: 60px 20px;
     }
 
-    h1 {
+    header h1 {
       font-size: 2.5rem;
-      margin-bottom: 20px;
-      animation: fadeInDown 1s ease-in-out;
+      margin-bottom: 10px;
     }
 
-    p {
+    header p {
       font-size: 1.2rem;
-      margin-bottom: 30px;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-      line-height: 1.5;
-      animation: fadeIn 2s ease-in-out;
     }
 
-    a.boton {
-      display: inline-block;
-      padding: 12px 25px;
+    nav {
+      background: #333;
+      color: white;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffdd57;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
       background: white;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 20px;
       color: #764ba2;
+    }
+
+    .about p, .services p {
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    .services ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 15px;
+    }
+
+    .services ul li {
+      background: #f0f0f0;
+      margin: 10px;
+      padding: 15px;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 25px;
+      background: #764ba2;
+      color: white;
       text-decoration: none;
       font-weight: bold;
       border-radius: 25px;
       transition: 0.3s;
-      animation: fadeInUp 1.5s ease-in-out;
     }
 
-    a.boton:hover {
-      background: #f0f0f0;
-      transform: scale(1.05);
+    .contact a:hover {
+      background: #667eea;
     }
 
     footer {
+      text-align: center;
+      padding: 15px;
+      background: #333;
+      color: white;
       margin-top: 40px;
-      font-size: 0.9rem;
-      opacity: 0.8;
     }
 
-    /* Animaciones */
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      nav { gap: 10px; }
     }
   </style>
 </head>
 <body>
-  <h1>🌍 ¡Bienvenido a mi página web!</h1>
-  <p>
-    Esta es una página moderna y responsiva creada con HTML y CSS.  
-    Está alojada gratis en GitHub Pages y cualquiera en el mundo puede verla. 🚀
-  </p>
-  <a href="https://github.com" target="_blank" class="boton">Visita mi GitHub</a>
 
+  <!-- Encabezado -->
+  <header>
+    <h1>Clases de Alemán en Línea</h1>
+    <p>con <strong>Givka Morales</strong></p>
+  </header>
+
+  <!-- Menú -->
+  <nav>
+    <a href="#about">Sobre mí</a>
+    <a href="#services">Servicios</a>
+    <a href="#contact">Contacto</a>
+  </nav>
+
+  <!-- Sobre mí -->
+  <section id="about" class="about">
+    <h2>Sobre mí</h2>
+    <p>
+      ¡Hola! Soy <strong>Givka Morales</strong>, profesora apasionada por la enseñanza del idioma alemán.  
+      Ofrezco clases <strong>100% en línea y personalizadas</strong>, adaptadas a tu nivel y objetivos.
+    </p>
+  </section>
+
+  <!-- Servicios -->
+  <section id="services" class="services">
+    <h2>Servicios</h2>
+    <p>Mis clases están diseñadas para que aprendas de forma práctica, dinámica y personalizada:</p>
+    <ul>
+      <li>🌍 Clases en línea vía Zoom o Google Meet</li>
+      <li>📚 Preparación para exámenes de certificación</li>
+      <li>💬 Conversación práctica para mejorar fluidez</li>
+      <li>🎯 Programas personalizados según tus metas</li>
+    </ul>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contact" class="contact">
+    <h2>Contacto</h2>
+    <p>¿Quieres comenzar a aprender alemán conmigo? Escríbeme:</p>
+    <a href="mailto:givka.morales@example.com">📧 Correo</a>
+    <a href="https://wa.me/5210000000000" target="_blank">💬 WhatsApp</a>
+  </section>
+
+  <!-- Pie de página -->
   <footer>
-    <p>Creado con ❤️ y GitHub Pages</p>
+    <p>© 2025 Clases de Alemán en Línea - Givka Morales</p>
   </footer>
+
 </body>
 </html>
