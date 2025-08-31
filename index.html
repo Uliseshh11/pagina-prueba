@@ -1,11 +1,93 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Mi primera página</title>
-  </head>
-  <body>
-    <h1>¡Hola mundo desde GitHub Pages! 🌍</h1>
-    <p>Esta es mi primera página web visible en todo el mundo.</p>
-  </body>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Página Web</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.5;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    a.boton {
+      display: inline-block;
+      padding: 12px 25px;
+      background: white;
+      color: #764ba2;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 25px;
+      transition: 0.3s;
+      animation: fadeInUp 1.5s ease-in-out;
+    }
+
+    a.boton:hover {
+      background: #f0f0f0;
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    /* Animaciones */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <h1>🌍 ¡Bienvenido a mi página web!</h1>
+  <p>
+    Esta es una página moderna y responsiva creada con HTML y CSS.  
+    Está alojada gratis en GitHub Pages y cualquiera en el mundo puede verla. 🚀
+  </p>
+  <a href="https://github.com" target="_blank" class="boton">Visita mi GitHub</a>
+
+  <footer>
+    <p>Creado con ❤️ y GitHub Pages</p>
+  </footer>
+</body>
 </html>
